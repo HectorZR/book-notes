@@ -13,6 +13,7 @@ type Book struct {
 	Status    uint8     `gorm:"not null"`
 	StartDate time.Time `gorm:"autoCreateTime;not null"`
 	EndDate   time.Time
+	Notes     []Note
 }
 
 // Create a new book record

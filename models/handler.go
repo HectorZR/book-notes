@@ -5,10 +5,11 @@ import (
 	"gorm.io/gorm"
 )
 
+// RunDatabase gets a connection and run all models
 func RunDatabase() {
 	db := GetConnection()
 
-	db.AutoMigrate(&Book{})
+	db.AutoMigrate(&Book{}, &Note{})
 
 	// some testing data
 	// db.Create(&Book{Name: "Hello book", Status: 0, StartDate: time.Now()})
