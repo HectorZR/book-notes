@@ -10,9 +10,6 @@ func RunDatabase() {
 	db := GetConnection()
 
 	db.AutoMigrate(&Book{}, &Note{})
-
-	// some testing data
-	// db.Create(&Book{Name: "Hello book", Status: 0, StartDate: time.Now()})
 }
 
 // GetConnection open a new connection with database
